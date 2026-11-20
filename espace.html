@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon espace | Honor Driver</title>
+<meta name="description" content="Honor Driver : service VTC premium à Abidjan. Jetour, Van Mercedes, Maybach et berlines de luxe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">HONOR <span>DRIVER</span></a>
+    <button class="burger" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="reservation.html">Réservation</a></li>
+      <li><a href="a-propos.html">À propos de nous</a></li>
+      <li><a href="espace.html" class="btn-user">Mon espace</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero"><div class="container">
+  <h1>Mon <em>espace</em></h1><p>Clients et chauffeurs : connectez-vous ou créez votre compte.</p>
+</div></section>
+
+<section style="padding-top:40px" id="authWrap">
+  <div class="container">
+    <div class="auth-card" id="authCard">
+      <div class="auth-tabs">
+        <button data-tab="tLogin" class="active">Connexion</button>
+        <button data-tab="tClient">Inscription client</button>
+        <button data-tab="tChauffeur">Devenir chauffeur</button>
+      </div>
+      <div class="auth-body">
+        <form id="tLogin" class="auth-pane">
+          <div class="field"><label>Email</label><input type="email" name="email" required></div>
+          <div class="field"><label>Mot de passe</label><input type="password" name="mdp" required></div>
+          <button class="btn btn-teal btn-block" id="formLoginBtn" type="submit">Se connecter</button>
+        </form>
+        <form id="tClient" class="auth-pane hidden">
+          <div class="field"><label>Nom complet</label><input name="nom" required></div>
+          <div class="field"><label>Téléphone</label><input type="tel" name="tel" required></div>
+          <div class="field"><label>Email</label><input type="email" name="email" required></div>
+          <div class="field"><label>Mot de passe (6 caractères min.)</label><input type="password" name="mdp" minlength="6" required></div>
+          <button class="btn btn-teal btn-block" type="submit">Créer mon compte client</button>
+        </form>
+        <form id="tChauffeur" class="auth-pane hidden">
+          <div class="field"><label>Nom complet</label><input name="nom" required></div>
+          <div class="field"><label>Téléphone / WhatsApp</label><input type="tel" name="tel" required></div>
+          <div class="field"><label>Email</label><input type="email" name="email" required></div>
+          <div class="field"><label>Ville</label><input name="ville" value="Abidjan" required></div>
+          <div class="field"><label>Numéro de permis de conduire</label><input name="permis" required></div>
+          <div class="field"><label>Votre véhicule</label>
+            <select name="vehicule" required><option value="">Choisir...</option><option>Jetour</option><option>Van Mercedes</option><option>Mercedes Maybach</option><option>Berline de luxe</option><option>Autre</option></select></div>
+          <div class="field"><label>Immatriculation</label><input name="immat" required></div>
+          <div class="field"><label>Années d'expérience</label><input type="number" name="exp" min="0" required></div>
+          <div class="field"><label>Mot de passe (6 caractères min.)</label><input type="password" name="mdp" minlength="6" required></div>
+          <button class="btn btn-teal btn-block" type="submit">Envoyer ma candidature</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="dash hidden" id="dash">
+      <div class="dash-head">
+        <div><h2>Bonjour, <span id="dName"></span></h2><p id="dRole"></p><div id="dInfo"></div></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="reservation.html" class="btn btn-primary">Nouvelle réservation</a>
+          <button class="btn btn-outline" id="logout">Déconnexion</button>
+        </div>
+      </div>
+      <div id="dBookings">
+        <h3 style="margin-bottom:12px;color:var(--navy)">Mes réservations</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Réf.</th><th>Véhicule</th><th>Trajet</th><th>Date</th><th>Statut</th></tr></thead>
+          <tbody id="bookBody"></tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div><h4>HONOR DRIVER</h4><p>Votre chauffeur privé à Abidjan. Confort, ponctualité et élégance à chaque trajet.</p></div>
+      <div><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="reservation.html">Réservation</a></li><li><a href="a-propos.html">À propos de nous</a></li><li><a href="espace.html">Mon espace</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+2250152592810">01 52 59 28 10</a></li><li> <a href="https://wa.me/2250152592810" target="_blank">WhatsApp</a></li><li> <a href="mailto:Andyyaorony06@gmail.com">Andyyaorony06@gmail.com</a></li></ul></div>
+    </div>
+    <div class="copy">© <span id="year">2026</span> Honor Driver — Tous droits réservés.</div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/2250152592810" target="_blank" aria-label="WhatsApp"></a>
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

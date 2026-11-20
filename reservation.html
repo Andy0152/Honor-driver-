@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réservation | Honor Driver</title>
+<meta name="description" content="Honor Driver : service VTC premium à Abidjan. Jetour, Van Mercedes, Maybach et berlines de luxe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">HONOR <span>DRIVER</span></a>
+    <button class="burger" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="reservation.html" class="active">Réservation</a></li>
+      <li><a href="a-propos.html">À propos de nous</a></li>
+      <li><a href="espace.html" class="btn-user">Mon espace</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero"><div class="container">
+  <h1>Réservez votre <em>trajet</em></h1><p>Choisissez votre véhicule, indiquez où vous allez : nous nous occupons du reste.</p>
+</div></section>
+
+<section style="padding-top:40px">
+  <div class="container booking">
+    <form class="panel" id="bookingForm">
+      <h2>Choisissez votre véhicule</h2>
+      <div class="cat-tabs">
+        <button type="button" class="cat" data-cat="jetour">
+          <div class="thumb"><img src="images/Jetour-T2-Image-14.jpg" alt="Jetour" loading="lazy" onerror="this.style.display='none'"></div><strong>Jetour</strong><small>👤 4 places</small></button>
+        <button type="button" class="cat" data-cat="van">
+          <div class="thumb"><img src="images/images (40).jpg" alt="Van Mercedes" loading="lazy" onerror="this.style.display='none'"></div><strong>Van Mercedes</strong><small>👤 7 places</small></button>
+        <button type="button" class="cat" data-cat="maybach">
+          <div class="thumb"><img src="images/images (41).jpg" alt="Mercedes Maybach" loading="lazy" onerror="this.style.display='none'"></div><strong>Mercedes Maybach</strong><small>👤 4 places</small></button>
+        <button type="button" class="cat" data-cat="berline">
+          <div class="thumb"><img src="images/images (42).jpg" alt="Berline de luxe" loading="lazy" onerror="this.style.display='none'"></div><strong>Berline de luxe</strong><small>👤 4 places</small></button>
+      </div>
+      <input type="hidden" name="vehicule" id="vehicule">
+
+      <h2> Où et pour combien ?</h2>
+      <div class="field"><label>Point de prise en charge</label><input name="depart" id="depart" placeholder="Ex : Cocody Riviera 2" required></div>
+      <div class="field"><label>Destination</label><input name="arrivee" id="arrivee" placeholder="Ex : Aéroport Félix Houphouët-Boigny" required></div>
+      <div class="recent"><h4>Destinations récentes</h4><div id="recentList"></div></div>
+
+      <div class="row2">
+        <div class="field"><label>Date</label><input type="date" name="date" id="date" required></div>
+        <div class="field"><label>Heure</label><input type="time" name="heure" required></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Passagers</label><input type="number" name="passagers" id="passagers" min="1" max="4" value="1" required></div>
+        <div class="field"><label>Votre offre (FCFA, min. 3 000)</label><input type="number" name="prix" min="3000" step="500" placeholder="Min. 3 000 FCFA"></div>
+      </div>
+      <div class="field"><label>Vos informations</label><input name="nom" id="nom" placeholder="Nom complet" required></div>
+      <div class="row2">
+        <div class="field"><input type="tel" name="tel" id="tel" placeholder="Téléphone / WhatsApp" required></div>
+        <div class="field"><input type="email" name="email" id="email" placeholder="Email (optionnel)"></div>
+      </div>
+      <div class="field"><textarea name="note" rows="2" placeholder="Remarques (bagages, siège enfant...)"></textarea></div>
+      <button class="btn btn-primary btn-block" type="submit">Commander mon chauffeur</button>
+      <p style="font-size:.75rem;color:#9aa1ee;margin-top:10px;text-align:center">Votre demande est envoyée à Honor Driver par WhatsApp et par email.</p>
+    </form>
+
+    <div class="map-wrap">
+      <iframe id="map" loading="lazy" title="Carte Abidjan" src="https://www.google.com/maps?q=Abidjan&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div><h4>HONOR DRIVER</h4><p>Votre chauffeur privé à Abidjan. Confort, ponctualité et élégance à chaque trajet.</p></div>
+      <div><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="reservation.html">Réservation</a></li><li><a href="a-propos.html">À propos de nous</a></li><li><a href="espace.html">Mon espace</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li> <a href="tel:+2250152592810">01 52 59 28 10</a></li><li> <a href="https://wa.me/2250152592810" target="_blank">WhatsApp</a></li><li> <a href="mailto:Andyyaorony06@gmail.com">Andyyaorony06@gmail.com</a></li></ul></div>
+    </div>
+    <div class="copy">© <span id="year">2026</span> Honor Driver — Tous droits réservés.</div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/2250152592810" target="_blank" aria-label="WhatsApp"></a>
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
